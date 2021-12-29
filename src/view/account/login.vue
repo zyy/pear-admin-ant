@@ -96,7 +96,6 @@ export default {
     .ant-btn {
       width: 100%;
       height: 42px;
-      line-height: 42px;
     }
   }
   .logo {
