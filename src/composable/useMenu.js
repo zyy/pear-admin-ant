@@ -17,8 +17,10 @@ export function useMenu() {
     watch(() => route.path, (path) => {
         selectedKeys.value = [path];
         let result = findParent(menus.value, path);
-        openKeys.value = result;
-        lastOpenKeys.value = result;
+        if(layout.value != 'layout-head'){
+            openKeys.value = result;
+            lastOpenKeys.value = result;
+        }
     }, { immediate: true })
 
     watch(() => layout.value, (layout) => {
