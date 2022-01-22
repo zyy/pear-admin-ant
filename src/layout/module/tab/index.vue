@@ -41,7 +41,7 @@
 import { computed } from "vue";
 import { useStore } from "vuex";
 import { DownOutlined } from "@ant-design/icons-vue";
-import { useTab } from "@/composable/tab";
+import { useTab } from "@/composable/useTab";
 import { useI18n } from "vue-i18n";
 
 export default {
@@ -51,10 +51,9 @@ export default {
   setup() {
     const { t } = useI18n();
     const { getters } = useStore();
+    const { to, list, active, close, closeOther, closeCurrent, closeAll } = useTab();
     const tabType = computed(() => getters.tabType);
-    const { to, list, active, close, closeOther, closeCurrent, closeAll } =
-      useTab();
-
+    
     const onEdit = function (path, action) {
       if (action === "remove") {
         close(path);

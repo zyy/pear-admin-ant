@@ -103,7 +103,7 @@ import { computed, watch, ref, unref } from "vue";
 import { useStore } from "vuex";
 import Menu from "../menu/index.vue";
 import Logo from "../logo/index.vue";
-import { useFullScreen } from "@/composable/common";
+import { useFullScreen } from "@/composable/useFullScreen";
 import { useRoute, useRouter } from "vue-router";
 import i18n from "@/locale/index.js";
 import {

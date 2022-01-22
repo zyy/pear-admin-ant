@@ -13,7 +13,7 @@
         >
           <!-- 继承至 a-table 的默认插槽 -->
           <template #name="{ record }">
-            {{ record.name }}
+             {{ record.name }}
           </template>
         </p-table>
       </a-card>

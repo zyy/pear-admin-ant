@@ -72,12 +72,14 @@ export default {
     const fixedSide = computed(() => getters.fixedSide);
     const isMobile = computed(() => getters.isMobile);
     const collapsedWidth = computed(() => getters.collapsedWidth);
+
     const closeSideBar = () => {
       const isComputedMobile = computed(() => getters.isMobile);
       if (isComputedMobile.value) {
         commit("app/TOGGLE_SIDEBAR", true);
       }
     };
+    
     const handleFoldSideBar = () => {
       const isComputedMobile = computed(() => getters.isMobile);
       const isCollapsed = computed(() => getters.collapsed);
@@ -85,6 +87,7 @@ export default {
         commit("app/TOGGLE_SIDEBAR");
       }
     };
+
     const handleLayouts = () => {
       const domWidth = document.body.getBoundingClientRect().width;
       const isLayoutMobile = domWidth !== 0 && domWidth - 1 < 992;
@@ -109,12 +112,12 @@ export default {
 
     return {
       closeSideBar,
-      isMobile,
-      collapsed,
       collapsedWidth,
       fixedHeader,
+      collapsed,
       fixedSide,
       sideWitch,
+      isMobile,
       classes,
       layout,
       theme,

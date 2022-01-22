@@ -19,7 +19,7 @@ import SubMenu from "./SubMenu.vue";
 import { computed, watch } from "vue";
 import { useStore } from "vuex";
 import { useRoute, useRouter } from 'vue-router';
-import { useMenu } from '@/composable/menu';
+import { useMenu } from '@/composable/useMenu';
 
 export default {
   components: {
