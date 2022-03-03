@@ -303,7 +303,9 @@ export default defineComponent({
 
     /// 为所有 column 新增默认 customRender 属性
     state.columns.forEach((column) => {
-      column.slots = { customRender: column.dataIndex };
+      if (!column?.slots?.customRender) {
+        column.slots = { customRender: column.dataIndex };
+      }
     });
 
     /// 过滤字段
