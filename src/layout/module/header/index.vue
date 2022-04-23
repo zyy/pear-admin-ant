@@ -46,7 +46,7 @@
       <div class="menu-item" v-else @click="fullScreen(2)">
         <CompressOutlined />
       </div>
-      <a-dropdown class="notice-item" placement="bottomCenter">
+      <a-dropdown class="notice-item" placement="bottom">
         <BellOutlined />
         <template #overlay>
           <a-menu class="notice-dropdown">
