@@ -168,9 +168,6 @@ export default {
         children = children[0].children;
       }
       router.push(path);
-      menus.value = getters.menu.find(
-        (r) => r.path === $route.matched[0].path
-      ).children;
     };
 
     const logout = async (e) => {

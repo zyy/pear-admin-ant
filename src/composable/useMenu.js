@@ -29,7 +29,7 @@ export function useMenu() {
         } else {
             menus.value = getters.menu;
         }
-    })
+    }, { immediate: true})
 
     function openChange(keys) {
         const lastPath = keys.find(key => lastOpenKeys.value.indexOf(key) === -1);
