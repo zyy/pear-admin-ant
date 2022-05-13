@@ -92,7 +92,7 @@ export const findPathById = (arr, key) => {
         return item.path;
       } else {
         if (item.children) {
-          forFn(item.children, name)
+          forFn(item.children, id)
         }
       }
     }
