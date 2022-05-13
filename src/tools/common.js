@@ -85,17 +85,19 @@ export const findParent = (arr, id) => {
  * @param id  当前路由
  */
 export const findPathById = (arr, key) => {
+  let path = null;
   var forFn = function (list, id) {
     for (var i = 0; i < list.length; i++) {
       var item = list[i]
       if (item.id === id) {
-        return item.path;
+        path = item.path;
       } else {
         if (item.children) {
           forFn(item.children, id)
         }
       }
     }
+    return path;
   }
   return forFn(arr, key);
 }
