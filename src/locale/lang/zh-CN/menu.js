@@ -23,5 +23,7 @@ export default {
   "error-404": "404",
   "error-500": "500",
   "permission": "系统权限",
-  "permission-test": "权限测试"
+  "permission-test": "权限测试",
+  "system":"系统管理",
+  "userInfo":"用户管理"
 }

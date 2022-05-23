@@ -32,10 +32,23 @@ export function useMenu() {
     }, { immediate: true})
 
     function openChange(keys) {
-        const lastPath = keys.find(key => lastOpenKeys.value.indexOf(key) === -1);
-        let result = findParentAll(menus.value, lastPath);
-        openKeys.value = result;
-        lastOpenKeys.value = result;
+      if (getters.layout == "layout-head" ){
+        return;
+      }
+      const lastPath = keys.find(key => lastOpenKeys.value.indexOf(key) === -1);
+      //let result = findParentAll(menus.value, lastPath);
+      let oneLevelMenu = [];
+      menus.value.filter(s => s.parent == 0).forEach(s => {
+        oneLevelMenu.push(s.path);
+      })
+      if (!oneLevelMenu.includes(lastPath)) {
+        openKeys.value = keys;
+        lastOpenKeys.value = keys;
+      } else {
+        let normalizePath = lastPath ? [lastPath] : [];
+        openKeys.value = normalizePath
+        lastOpenKeys.value = normalizePath
+      }
     }
 
     return {

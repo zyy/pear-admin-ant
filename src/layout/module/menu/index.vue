@@ -48,7 +48,7 @@ export default {
             menus.value = getters.menu.find((r) => r.path === route.matched[0].path).children;
         }
     })
-    
+
     const { selectedKeys, openKeys, openChange, menus } = useMenu();
 
     return { onSelect, openChange, selectedKeys,  menuModel, menuTheme, openKeys, menus };
@@ -57,8 +57,8 @@ export default {
 </script>
 <style>
 #menu {
-  overflow: scroll;
-  height: calc(100% - 60px);
+  /*overflow: scroll;*/
+  /*height: calc(100% - 60px);*/
 }
 
 #menu::-webkit-scrollbar-track {

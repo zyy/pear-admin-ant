@@ -322,10 +322,10 @@
   },
   {
     "id": "25",
-    "parent": "0",
+    "parent": "27",
     "path": "/permission",
     "name": "permission",
-    "type": "menu",
+    "type": "dir",
     "icon": "DatabaseOutlined",
     "title": "系统权限",
     "sort": 6,
@@ -347,5 +347,33 @@
     "hidden": false,
     "status": true,
     "i18n": "permission-test"
+  },
+  {
+    "id": "27",
+    "parent": "0",
+    "path": "/system",
+    "name": "system",
+    "type": "dir",
+    "icon": "SettingOutlined",
+    "title": "系统管理",
+    "sort": 8,
+    "link": "",
+    "hidden": false,
+    "status": true,
+    "i18n": "system"
+  },
+  {
+    "id": "28",
+    "parent": "27",
+    "path": "/system/userInfo",
+    "name": "userInfo",
+    "type": "menu",
+    "icon": "DatabaseOutlined",
+    "title": "用户管理",
+    "sort": 0,
+    "link": "",
+    "hidden": false,
+    "status": true,
+    "i18n": "userInfo"
   }
 ]

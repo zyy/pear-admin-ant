@@ -23,5 +23,7 @@ export default {
   "error-404": "404",
   "error-500": "500",
   "permission": "permission",
-  "permission-test": "permission"
+  "permission-test": "permission",
+  "system":"system manager",
+  "userInfo":"user manager"
 }
