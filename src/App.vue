@@ -4,6 +4,7 @@
   </a-config-provider>
 </template>
 <script>
+//test
 import {computed, defineComponent} from "vue";
 import {useStore} from "vuex";
 import {useI18n} from 'vue-i18n/index';
