@@ -92,7 +92,7 @@
           </a-menu>
         </template>
       </a-dropdown>
-      <div v-if="!isMobile" class="menu-item" @click="setting()">
+      <div  class="menu-item" @click="setting()">
         <MoreOutlined />
       </div>
     </div>
